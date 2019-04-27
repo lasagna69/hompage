@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+	<head>
+		<script type="text/javascript">
+			function startTime()
+			{
+				var today=new Date();
+				var h=today.getHours();
+				var m=today.getMinutes();
+				var s=today.getSeconds();
+				m=checkTime(m);
+				s=checkTime(s);
+				document.getElementById('txt').innerHTML=h%12+":"+m;
+				t=setTimeout('startTime()',500);
+			}
+			function checkTime(i)
+			{
+				if (i<10)
+				{
+					i="0" + i;
+				}
+				return i;
+			}
+		</script>
+		<title>Homepage</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css.css" />
+	</head>
+	<body onload="startTime()">
+  <div id="backgroundc">
+		<div id="container">
+			<div id="header">
+				<h3 style="display: inline;"><span class="red"> ~ </span> <span class="green">locate</span></h3>
+				<form method="get" action="https://www.google.com/search">
+					<input type="text" autofocus="autofocus" name="q" \>
+				</form>
+			</div>
+			<div id="links">
+
+				<div class="linksbox">
+					<h3><span class="red"> ~ [General]</span><span class="blue">:</span> ls</h3>
+			        <a class="pink"  target="blank" href="https://twitter.com">Twitter</a>
+					<a class="pink"  target="blank" href="https://gmail.com">Gmail</a>
+					<a class="cyan" target="blank" href="https://youtube.com">Youtube</a>
+					<a class="cyan" target="blank" href="https://bandcamp.com">Bandcamp</a>
+			        <a class="cyan" target="blank" href="https://github.com/">Github</a>
+				</div>
+
+				<div class="linksbox">
+					<h3><span class="red"> ~ [Lurking]</span><span class="blue">:</span> ls</h3>
+			        <a class="cyan" target="blank" href="https://dangeru.us">danger/u/</a>
+			        <a class="cyan" target="blank" href="https://4chan.org/a/catalog">/a/</a>
+			        <a class="cyan" target="blank" href="https://4chan.org/vg/catalog">/vg/</a>
+					<a class="cyan" target="blank" href="https://old.reddit.com/r/headphones/">headphones</a>
+					<a class="cyan" target="blank" href="https://old.reddit.com//">Frontpage</a>
+				</div>
+
+				<div class="linksbox">
+					<h3><span class="red"> ~ [Others]</span><span class="blue">:</span> ls</h3>
+			        <a class="pink"  target="blank" href="https://edenofthewest.com/">Eden Radio</a>
+					<a class="pink"  target="blank" href="https://en.wikipedia.org">Wikipedia</a>
+					<a class="cyan" target="blank" href="https://stackexchange.com/">stackexchange</a>
+					<a class="cyan" target="blank" href="https://manga.madokami.al">madokami</a>
+					<a class="cyan" target="blank" href="https://twist.moe">twist.moe</a>
+					<a class="cyan" target="blank" href="https://nyaa.si">nyaa</a>
+				</div>
+
+			</div>
+			<div id="header">
+				<h3 style="display: inline"><span class="red"> ~ </span><span class="green"> echo " </span><span class="gray">Welcome Tom!, current time is </span> <span class="gray" id="txt"></span><span class="green"> "</span>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
