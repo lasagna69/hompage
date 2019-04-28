@@ -19,17 +19,17 @@ html, body{
 	font-family: 'SF Mono';
 	font-weight: lighter;
 }
-/*
-#backgroundc{
+
+/* #backgroundc{
 	width: 100%;
 	height: 100%;
 	z-index: 0;
-	background-image: url("/users/manik/downloads/start-page-master/back.jpg");
+	background-image: url("bg/back.jpg");
 	-webkit-filter: blur(5px);
 	background-size: cover;
 	position: fixed;
-}
-*/
+} */
+
 #container {
 	z-index: 9999;
 	position: fixed;
