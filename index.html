@@ -4,13 +4,24 @@
 			function startTime()
 			{
 				var today=new Date();
-				var h=today.getHours();
+				var h =today.getHours();
 				var m=today.getMinutes();
 				var s=today.getSeconds();
+				var ampm = getAMPM(h);
+				var hours = h>12?h-12:h; //used to be modulo but this caused problems when time is 12PM
 				m=checkTime(m);
 				s=checkTime(s);
-				document.getElementById('txt').innerHTML=h%12+":"+m;
+				document.getElementById('txt').innerHTML=hours+":"+m+' '+ampm;
 				t=setTimeout('startTime()',500);
+			}
+			function getAMPM (h){
+				if(h==12){
+					return 'pm';
+				}else if(h>12){
+					return 'pm';
+				}else{
+					return 'am';
+				}
 			}
 			function checkTime(i)
 			{
